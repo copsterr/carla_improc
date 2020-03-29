@@ -1,0 +1,9 @@
+.idea
+__pycache__
+venv
+
+CARLA_0.9.8/WindowsNoEditor/CarlaUE4
+CARLA_0.9.8/WindowsNoEditor/Engine
+CARLA_0.9.8/WindowsNoEditor/HDMaps
+CARLA_0.9.8/WindowsNoEditor/CarlaUE4.exe
+
