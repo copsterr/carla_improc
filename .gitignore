@@ -1,9 +1,13 @@
-.idea
-__pycache__
-venv
 
-CARLA_0.9.8/WindowsNoEditor/CarlaUE4
-CARLA_0.9.8/WindowsNoEditor/Engine
-CARLA_0.9.8/WindowsNoEditor/HDMaps
+.idea/
 CARLA_0.9.8/WindowsNoEditor/CarlaUE4.exe
-
+CARLA_0.9.8/WindowsNoEditor/CarlaUE4/
+CARLA_0.9.8/WindowsNoEditor/Engine/
+CARLA_0.9.8/WindowsNoEditor/HDMaps/
+CARLA_0.9.8/WindowsNoEditor/PythonAPI/carla/agents/__pycache__/
+CARLA_0.9.8/WindowsNoEditor/PythonAPI/carla/agents/navigation/__pycache__/
+CARLA_0.9.8/WindowsNoEditor/PythonAPI/carla/agents/tools/__pycache__/
+CARLA_0.9.8/WindowsNoEditor/PythonAPI/examples/__pycache__/
+CARLA_0.9.8/WindowsNoEditor/PythonAPI/examples/mycarlaenv/
+__pycache__/
+venv/
