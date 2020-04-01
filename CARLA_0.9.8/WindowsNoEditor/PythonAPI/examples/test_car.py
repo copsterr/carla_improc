@@ -37,13 +37,27 @@ IM_HEIGHT = 480
 
 """ FNS """
 
-def process_img(image):
+def process_img(image, fps):
     i = np.array(image.raw_data)
     i2 = i.reshape((IM_HEIGHT, IM_WIDTH, 4))
-    i3 = i2[:, :, :3]
-    cv2.imshow("", i3)
+    res = i2[:, :, :3]
+
+
+    font = cv2.FONT_HERSHEY_SIMPLEX
+    org = (25, 25)
+    fontScale = 0.5
+    color = (0, 255, 255)
+    thickness = 1
+    res = cv2.putText(cv2.UMat(res), f"fps: {fps}", org, font, fontScale, color, 
+                      thickness, cv2.LINE_AA)
+
+
+
+    cv2.imshow("", res)
     cv2.waitKey(1)
-    return i3 / 255.0
+    
+    # return res / 255.0
+
 
 # list to store actor in the simulation
 actor_list = []
@@ -156,9 +170,17 @@ try:
 
         # get image from the queue and process
         img = image_queue.get()
-        process_img(img)
-
+        
         tprocess = time.time() - tstart
+        print(1/tprocess)
+        # try:
+        #     fps = round(1/tprocess, 2)
+        # except ZeroDivisionError:
+        #     fps = 0
+        #
+        # print(fps)
+        
+        process_img(img, 1/tprocess)
         # print(f"FPS: {round(1/tprocess, 2)}")
 
 
